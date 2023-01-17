@@ -18,7 +18,7 @@ void PrintArray(int[] col)
     int index=0;
     while(index<count)
     {
-        Console.WriteLine(col[index]);
+        Console.Write(col[index]+" ");
         index++;
     }
 }
