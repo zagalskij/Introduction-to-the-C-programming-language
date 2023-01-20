@@ -5,16 +5,22 @@
 // 32679 -> 6
 int ThirdNumber(int a)
 {
-    return a%100%10;
+    int result = 0;
+    int del = 1;
+    int length = a.ToString().Length;
+    if (a < 3)
+        Console.WriteLine("There is no third digit");
+    else
+    {
+        for (int i = length; i != 3; i--)
+        {
+            del = del * 10;
 
+        }
+        result = a / del % 100 % 10;
+    }
+    return result;
 }
-Console.WriteLine("Enter a three-digit number: ");
+Console.WriteLine("Enter a number: ");
 int number = int.Parse(Console.ReadLine());
-int amount = number.ToString().Length;
-
-if (amount < 3 || amount > 3)
-{
-    Console.WriteLine("You entered a non-three-digit number");
-}
-else
-    Console.WriteLine("The third number:" + ThirdNumber(number));
+Console.WriteLine("The third number:" + ThirdNumber(number));
