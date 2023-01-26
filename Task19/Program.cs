@@ -10,7 +10,7 @@ bool palindrom(int number)
     int digitCount=str.Length/2;
     int count=0;
     if(str.Length==1)
-    return false;
+    return true;
     if(str[0]==str[digitLast]){
     for (int i = 1; i < digitCount; i++)
     {
