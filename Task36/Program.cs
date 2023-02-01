@@ -13,15 +13,17 @@ double[] FillArray(int number)
 }
 double SumEvenNumbers(double[] array)
 {
+    int i=0;
     double sum=0;
     foreach (double item in array)
     {
-        if(item%2==1)
+        if(i%2==1)
         sum+=item;
+        i++;
     }
     return sum;
 }
 Console.WriteLine("Enter the length of the array");
 int length=int.Parse(Console.ReadLine());
 double[] array = FillArray(length);
-Console.WriteLine("Sum of even elements in the array [" + string.Join(", ",array)+"] : "+SumEvenNumbers(array));
+Console.WriteLine("The sum of the elements in the array in odd positions [" + string.Join(", ",array)+"] : "+SumEvenNumbers(array));
