@@ -17,10 +17,9 @@ int[] FillArray(int number)
 int FromDecimalToBinary(int number)
 {
 
-if (number ==0)
-return 0;
-number%2;
-return FromDecimalToBinary(number/2);
+if (number ==1)
+return 1;
+return number%2+10*FromDecimalToBinary(number/2);
 
 }
-Console.WriteLine(FromDecimalToBinary(45));
+Console.WriteLine(FromDecimalToBinary(3));
