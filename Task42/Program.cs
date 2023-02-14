@@ -14,12 +14,15 @@ int[] FillArray(int number)
     return mas;
 }
 
-int FromDecimalToBinary(int number)
+void FromDecimalToBinary(int number)
 {
-
 if (number ==1)
-return 1;
-return number%2+10*FromDecimalToBinary(number/2);
-
+{Console.Write(1);
+return;}
+FromDecimalToBinary(number/2);
+Console.Write(number%2);
 }
-Console.WriteLine(FromDecimalToBinary(3));
+Console.WriteLine("Enter a number in decimal notation");
+int number=Convert.ToInt32(Console.ReadLine());
+Console.Write(number+" -> ");
+FromDecimalToBinary(number);
