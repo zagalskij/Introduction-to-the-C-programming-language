@@ -44,6 +44,8 @@ int[,,] FillArray(int lists, int rows, int columns)
 /// <returns></returns>
 int[,,] FillArray2(int lists, int rows, int columns)
 {
+    if ((90 < lists * rows * columns))
+        throw new Exception("The range of numbers is less than, the dimension of the array");
     Random random = new Random();
 
     int num = 0;
@@ -113,9 +115,5 @@ Console.WriteLine("enter the number of rows");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("enter the number of columns");
 int columns = Convert.ToInt32(Console.ReadLine());
-if ((90 > lists * rows * columns))
-{
-    int[,,] array = FillArray2(lists, rows, columns);
-    PrintArray(array);
-}
-else Console.WriteLine("Диапазон чисел меньше чем, размерность массива");
+int[,,] array = FillArray2(lists, rows, columns);
+PrintArray(array);
