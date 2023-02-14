@@ -4,8 +4,14 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-using System.Linq;
 
+/// <summary>
+/// Метод который заполняет массив не повторяющимися числами друг за другом
+/// </summary>
+/// <param name="lists">количество листов</param>
+/// <param name="rows">количество строк</param>
+/// <param name="columns">количество столбцов</param>
+/// <returns></returns>
 int[,,] FillArray(int lists, int rows, int columns)
 {
     Random random = new Random();
@@ -28,6 +34,14 @@ int[,,] FillArray(int lists, int rows, int columns)
     }
     return array;
 }
+
+/// <summary>
+/// Метод который заполняет массив уникальными значениями
+/// </summary>
+/// <param name="lists">количество листов</param>
+/// <param name="rows">количество строк</param>
+/// <param name="columns">количество столбцов</param>
+/// <returns></returns>
 int[,,] FillArray2(int lists, int rows, int columns)
 {
     Random random = new Random();
@@ -52,6 +66,13 @@ int[,,] FillArray2(int lists, int rows, int columns)
     }
     return array;
 }
+
+/// <summary>
+/// Проверка существует ли число в массиве
+/// </summary>
+/// <param name="array">массив</param>
+/// <param name="value">значение на проверку, есть ли в массиве</param>
+/// <returns></returns>
 bool Contains(int[,,] array, int value)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -66,6 +87,10 @@ bool Contains(int[,,] array, int value)
     }
     return false;
 }
+/// <summary>
+/// печать массива
+/// </summary>
+/// <param name="array">массив</param>
 void PrintArray(int[,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
