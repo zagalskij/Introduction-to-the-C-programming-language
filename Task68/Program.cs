@@ -13,4 +13,4 @@ int AckermanFunction(int m, int n)
     if (m > 0 && n > 0) return AckermanFunction(m - 1, AckermanFunction(m, n - 1));
     return AckermanFunction(m, n);
 }
-Console.WriteLine("Ackerman свFunction for numbers A("+m+" "+n+")="+AckermanFunction(m, n));
+Console.WriteLine("Ackerman Function for numbers A("+m+","+n+") = "+AckermanFunction(m, n));
