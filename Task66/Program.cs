@@ -15,5 +15,5 @@ Console.WriteLine("The sum of the elements in the range from "
 +initialValue
 +" to "
 +finalValue
-+ " "
++ " -> "
 +SumRec(initialValue, finalValue));
